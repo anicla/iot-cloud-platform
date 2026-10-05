@@ -1,0 +1,17 @@
+services:
+  control_unit:
+    build: ./ControlUnit
+    environment:
+      - HOST=0.0.0.0
+      - PORT=9000
+    ports:
+      - "9000:9000"
+  sensor_simulator:
+    build: ./SensorSimulator
+    environment:
+      - UC_SIMULATOR_HOST=control_unit
+      - UC_SIMULATOR_PORT=9000
+      - SAMPLING_FREQUENCY=10
+    depends_on:
+      - control_unit
+

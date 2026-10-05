@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Configuracion</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="./configuration.js"></script>
+</head>
+<body onload="search_container_configuration()">
+  <main>
+    <h1>Configuracion del contenedor</h1>
+    <div id="configuration_viewer"></div>
+    <section class="form-panel">
+      <label for="samplingFrequencyInputText">Nueva frecuencia de muestreo</label>
+      <input type="text" id="samplingFrequencyInputText" value="2">
+      <label for="sendingFrequencyInputText">Nueva frecuencia de envio</label>
+      <input type="text" id="sendingFrequencyInputText" value="2">
+      <button type="button" onclick="update_configuration()">Enviar</button>
+      <button type="button" onclick="location.href='./index.html'">Volver</button>
+    </section>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+th,
+td {
+  border: 1px solid #d5d9e0;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #eef2f7;
+}
+
+.form-panel {
+  display: grid;
+  gap: 10px;
+  max-width: 360px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+}
+

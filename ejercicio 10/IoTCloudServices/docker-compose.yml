@@ -1,0 +1,24 @@
+services:
+  webapp_backend:
+    build: ./webapp-backend
+    ports:
+      - "5003:5003"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=5003
+      - TELEMETRY_MICROSERVICE_ADDRESS=telemetry_microservice
+      - TELEMETRY_MICROSERVICE_PORT=5001
+      - DEVICES_MICROSERVICE_ADDRESS=devices_microservice
+      - DEVICES_MICROSERVICE_PORT=5002
+      - PYTHONUNBUFFERED=1
+  webapp_frontend:
+    build: ./webapp-frontend
+    ports:
+      - "80:80"
+    environment:
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY:-}
+
+networks:
+  default:
+    external: true
+    name: iot_platform
